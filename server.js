@@ -11,12 +11,12 @@ app.post('/posts' , (req, res) => {
 
     posts.push(req.body)
 
-    res.send('Ok post')
+    res.status(201).json(req.body)
 })
 
 app.get('/posts', (req, res) => {
 
-res.json(posts)
+res.status(200).json(posts)
 
 })
 
